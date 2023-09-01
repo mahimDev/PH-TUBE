@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  
+    <title>PH Tube</title>
+    <style>
+      .font {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font bg-gradient-to-r from-red-100 from-10% via-yellow-100 via-30% to-orange-100 to-90%">
+    <header class="container mx-auto">
+      <!-- navber -->
+      <div class="navbar bg-gradient-to-r from-red-300 from-10% via-yellow-300 via-30% to-orange-300 to-90%">
+        <div class="navbar-start">
+          <img src="./Logo.png" alt="" />
+        </div>
+        <div class="navbar-center">
+          <a class="btn btn-ghost normal-case text-xl border-0 bg-gradient-to-r from-red-500 to-yellow-500  hover:from-yellow-500 from-10% hover:to-orange-500 to-90% text-white">Sort by view</a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="./blog.html" class="btn border-0 bg-gradient-to-r from-red-500 to-yellow-500  hover:from-yellow-400 from-10% hover:to-red-500 to-90% text-white">Blog</a>
+        </div>
+      </div>
+    </header>
+    <hr class="my-5" />
+    <main class="container mx-auto">
+      <div id="all-tab-btn" class=" text-center grid grid-cols-2 md:grid-cols-4   "></div>
+      <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
+       
+      </div>
+
+
+      
+    </div>
+    <div id="container-oops" class="text-center py-20 hidden">
+    <div class="flex justify-center">  <img class="items-center" src="./Icon.png" alt=""></div>
+      <h1 class="text-7xl">Oops!! Sorry, There is no content here</h1>
+    </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
