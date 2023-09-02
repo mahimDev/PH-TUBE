@@ -29,6 +29,7 @@ const cardDiv = async (click = 1000) => {
   // console.log(cardData);
   cardContainer(cardData);
 };
+
 const cardContainer = (data) => {
   const opss = document.getElementById("container-oops");
   if (data.length === 0) {
@@ -36,7 +37,7 @@ const cardContainer = (data) => {
   } else {
     opss.classList.add("hidden");
   }
-  console.log(data);
+  // console.log(data);
   const allCard = document.getElementById("card-container");
   allCard.innerHTML = "";
   data.forEach((card) => {
@@ -95,6 +96,33 @@ const cardContainer = (data) => {
     allCard.appendChild(creatCard);
   });
 };
+
+const sortByView = async () => {
+  const dataCollect = await fetch(
+    `https://openapi.programming-hero.com/api/videos/category/1000`
+  );
+  const datatext = await dataCollect.json();
+  const cardData = datatext.data;
+  // console.log(cardData)
+ for(const card of cardData){
+  const views = card.others.views
+const view =  views.split('')
+ view.pop()
+const joun = view.join('')
+
+  card.others.views = joun 
+ } 
+ 
+ cardData.sort((a,b) => parseFloat(b.others.views) - parseFloat(a.others.views))
+for(const viewloop of cardData){
+  const mahim = viewloop.others.views 
+  viewloop.others.views = mahim + "k"
+}
+ cardContainer(cardData)
+
+}
+
+// console.log(short)
 
 const handleBtn = (click) => {
   cardDiv(click);
