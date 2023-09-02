@@ -56,7 +56,7 @@ const cardContainer = (data) => {
     // const hor =hours.toFixed()
 
     // console.log(hourse)
-
+const items = `<p class="absolute right-2 bottom-2 rounded-lg bg-gray-800 p-1 text-white">${showTime} </p>`
     const creatCard = document.createElement("div");
     creatCard.innerHTML = `
         <div class="card hover:text-white hover:bg-gradient-to-r hover:from-yellow-400 from-10% hover:to-red-500 to-90% text-black shadow-xl p-4">
@@ -64,10 +64,9 @@ const cardContainer = (data) => {
         <figure><img class="h-40 w-full" src="${
           card?.thumbnail
         }" alt="Shoes" /></figure>
-        
-          <p class="absolute right-2 bottom-2 rounded-lg bg-gray-800 p-1 text-white">${
-            card.others.posted_date ? showTime : ""
-          }</p>
+
+        ${
+          card.others.posted_date ? items : ""}
        </div>
             <div class="card-body">
             <div class="flex gap-2 ">
